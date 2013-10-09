@@ -12,7 +12,7 @@
 	
 	<!-- Creates an in-memory "rewards" database populated with test data for fast testing -->
 	<jdbc:embedded-database id="dataSource">
-		<jdbc:script location="classpath:hibernate/config/xml/schema.sql"/>
+		<jdbc:script location="classpath:hibernate/config/schema.sql"/>
 	</jdbc:embedded-database>
 
 	<!-- TODO 9: Define a bean named 'sessionFactory' that configures a test SessionFactory -->
@@ -20,7 +20,7 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="annotatedClasses">
 			<list>
-				<value>hibernate.config.xml.Account</value>
+				<value>hibernate.config.Account</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

@@ -1,4 +1,4 @@
-package hibernate.config.java;
+package hibernate.config;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=HibernateConfig.class)
+@ContextConfiguration(locations="config-spring-hibernate.xml")
 public class HibernateConfigTest {
 	
 	@Autowired
